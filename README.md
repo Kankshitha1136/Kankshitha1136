@@ -8,28 +8,17 @@
 Kankshitha1136/Kankshitha1136 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
 --->
-include <iostream>
-#include <cstdlib>
-#include <pthread.h>
-using namespace std;
-#define NUM_THREADS 5
-void *PrintHello(void *threadid) {
-   long tid;
-   tid = (long)threadid;
-   printf("Hello World! Thread ID, %d\n", tid);
-   pthread_exit(NULL);
-}
-int main () {
-   pthread_t threads[NUM_THREADS];
-   int rc;
-   int i;
-   for( i = 0; i < NUM_THREADS; i++ ) {
-      cout << "main() : creating thread, " << i << endl;
-      rc = pthread_create(&threads[i], NULL, PrintHello, (void *)i);
-      if (rc) {
-         printf("Error:unable to create thread, %d\n", rc);
-         exit(-1);
-      }
-   }
-   pthread_exit(NULL);
-}
+#Python program to count vowel or consonant of the given string
+str=input("Please enter a string as you wish: ");
+vowels=0
+consonants=0
+
+for i in str:
+    if(i == 'a'or i == 'e'or i == 'i'or i == 'o'or i == 'u' or
+       i == 'A'or i == 'E'or i == 'I'or i == 'O'or i == 'U' ):
+           vowels=vowels+1;#vowel counter is incremented by 1
+    else:
+        consonants=consonants+1;
+#consonant counter is incremented by 1
+print("The number of vowels:",vowels);
+print("\nThe number of consonant:",consonants);

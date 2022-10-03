@@ -8,20 +8,22 @@
 Kankshitha1136/Kankshitha1136 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
 --->
-# Store input numbers:  
-num1 = input('Enter first number: ')  
-num2 = input('Enter second number: ')  
-  
-# Add two numbers  
-sum = float(num1) + float(num2)  
-# Subtract two numbers  
-min = float(num1) - float(num2)  
-# Multiply two numbers  
-mul = float(num1) * float(num2)   
-# Display the sum  
-print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))  
-  
-# Display the subtraction  
-print('The subtraction of {0} and {1} is {2}'.format(num1, num2, min))  
-# Display the multiplication  
-print('The multiplication of {0} and {1} is {2}'.format(num1, num2, mul))  
+def is_palindrome(s):
+    if len(s) < 1:
+        return True
+    else:
+        if s[0] == s[-1]:
+            return is_palindrome(s[1:-1])
+        else:
+            return False
+a=str(input("Enter string:"))
+if(is_palindrome(a)==True):
+    print("String is a palindrome!")
+else:
+    print("String isn't a palindrome!")
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Securi

@@ -4,14 +4,21 @@
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me ...
 
-myDict = {'a': 'apple', 'b': 'Banana' , 'o': 'Orange', 'm': 'Mango'}
-print("Dictionary : ", myDict)
+# Python program to print downward left half pyramid star pattern 
 
-key = input("Please enter the Key you want to search for: ")
+def pattern(n):
+   i = 1
+   while i <= n :
+      j = n
+      while j >= i:
+         # printing stars
+         print("*", end=" ")
+         j = j - 1
+      print()
+      i = i + 1
+ 
+# take inputs
+n = int(input('Enter the number of rows: '))
 
-
-if key in myDict.keys():
-    print("\nKey Exists in this Dictionary")
-    print("Key = ", key, " and Value = ", myDict[key])
-else:
-    print("\nKey Does not Exists in this Dictionary")
+# calling function
+pattern(n)
